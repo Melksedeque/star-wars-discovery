@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { NavigationProvider } from "./contexts/NavigationContext";
 import Layout from "./components/Layout";
 import { Films } from "./pages/Films";
 import { Characters } from "./pages/Characters";
@@ -15,17 +16,19 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/films" element={<Films />} />
-            <Route path="/characters" element={<Characters />} />
-            <Route path="/species" element={<Species />} />
-            <Route path="/planets" element={<Planets />} />
-            <Route path="/starships" element={<Starships />} />
-            <Route path="/vehicles" element={<Vehicles />} />
-          </Routes>
-        </Layout>
+        <NavigationProvider>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/films" element={<Films />} />
+              <Route path="/characters" element={<Characters />} />
+              <Route path="/species" element={<Species />} />
+              <Route path="/planets" element={<Planets />} />
+              <Route path="/starships" element={<Starships />} />
+              <Route path="/vehicles" element={<Vehicles />} />
+            </Routes>
+          </Layout>
+        </NavigationProvider>
       </Router>
     </QueryClientProvider>
   );
