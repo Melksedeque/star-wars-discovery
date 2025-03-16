@@ -1,5 +1,5 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
-import { useLocation } from 'react-router-dom';
+import { createContext, useContext, useState, ReactNode } from "react";
+import { useLocation } from "react-router-dom";
 
 interface NavigationItem {
   name: string;
@@ -12,7 +12,9 @@ interface NavigationContextType {
   isHomeRoute: boolean;
 }
 
-const NavigationContext = createContext<NavigationContextType | undefined>(undefined);
+const NavigationContext = createContext<NavigationContextType | undefined>(
+  undefined
+);
 
 export function NavigationProvider({ children }: { children: ReactNode }) {
   const location = useLocation();
@@ -61,7 +63,7 @@ export function NavigationProvider({ children }: { children: ReactNode }) {
 export function useNavigation() {
   const context = useContext(NavigationContext);
   if (!context) {
-    throw new Error('useNavigation must be used within a NavigationProvider');
+    throw new Error("useNavigation must be used within a NavigationProvider");
   }
   return context;
 }
