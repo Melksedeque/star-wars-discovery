@@ -22,32 +22,32 @@ export function NavigationProvider({ children }: { children: ReactNode }) {
     {
       name: "Filmes",
       href: "/films",
-      icon: "/images/icons/films.svg",
+      icon: "/icons/films.png",
     },
     {
       name: "Personagens",
       href: "/characters",
-      icon: "/images/icons/characters.svg",
+      icon: "/icons/characters.svg",
     },
     {
       name: "Planetas",
       href: "/planets",
-      icon: "/images/icons/planets.svg",
+      icon: "/icons/planets.svg",
     },
     {
       name: "Espécies",
       href: "/species",
-      icon: "/images/icons/species.svg",
+      icon: "/icons/species.svg",
     },
     {
       name: "Naves",
       href: "/starships",
-      icon: "/images/icons/starships.svg",
+      icon: "/icons/starships.svg",
     },
     {
       name: "Veículos",
       href: "/vehicles",
-      icon: "/images/icons/vehicles.svg",
+      icon: "/icons/vehicles.svg",
     },
   ]);
 
