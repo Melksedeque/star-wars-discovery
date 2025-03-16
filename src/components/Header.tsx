@@ -6,16 +6,16 @@ export default function Header() {
   const { isHomeRoute } = useNavigation();
 
   return (
-    <header className="bg-black flex items-center justify-center p-8 mb-10">
-      {!isHomeRoute && <Navigation />}
-      <Link to={"/"} className="">
+    <header className="bg-black flex items-center justify-center gap-28 p-8 mb-10">
+      {!isHomeRoute && <Navigation position="left" size="16" />}
+      <Link to={"/"}>
         <img
           src="/images/LogoStarWarsDiscovery.png"
           alt="Star Wars Logo"
           className="w-28"
         />
       </Link>
-      {!isHomeRoute && <Navigation />}
+      {!isHomeRoute && <Navigation position="right" size="16" />}
     </header>
   );
 }
