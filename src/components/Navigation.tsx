@@ -29,10 +29,8 @@ export default function Navigation({
           key={item.name}
           to={item.href}
           className={cn(
-            `flex flex-col items-center p-3 rounded-md text-md font-medium transition-colors w-${size}`,
-            location.pathname === item.href
-              ? "text-yellow-500 bg-yellow-500/10"
-              : "text-gray-300 hover:text-yellow-500 hover:bg-yellow-500/10"
+            `flex flex-col items-center p-3 text-md text-white font-bold w-${size} transition-all duration-300 hover:scale-120`,
+            location.pathname === item.href ? "scale-120" : ""
           )}
         >
           <img src={item.icon} alt={`Ícone de ${item.name}`} />
