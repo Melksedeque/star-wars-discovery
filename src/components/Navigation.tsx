@@ -29,7 +29,8 @@ export default function Navigation({
           key={item.name}
           to={item.href}
           className={cn(
-            `flex flex-col w-${size} items-center p-3 text-md text-white font-bold transition-all duration-300 hover:scale-120`,
+            `flex flex-col items-center p-3 text-md text-white font-bold transition-all duration-300 hover:scale-120`,
+            `w-${size}`,
             location.pathname === item.href ? "scale-120" : ""
           )}
         >
